@@ -1,0 +1,4 @@
+# Dependencias para ejecutar connection_postgres.py
+# Nota: psycopg2-binary es práctico para desarrollo local y Windows.
+# En producción se recomienda usar 'psycopg2' compilado contra las librerías del sistema.
+psycopg2-binary==2.9.9
