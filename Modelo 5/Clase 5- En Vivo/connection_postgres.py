@@ -74,4 +74,4 @@ conn = conectar()
 if conn is None:
     print(f'[Error] No se pudo contectar a la base de datos')
 #llamar_profesores(conn)
-ingresar_profesor(conn,1,'Juan David','Triana','jtriana@devseniorcode.com','320920',50000)
+ingresar_profesor(conn,1,'Juan David','Triana','jtrianxa@devseniorcode.com','320920',50000)
