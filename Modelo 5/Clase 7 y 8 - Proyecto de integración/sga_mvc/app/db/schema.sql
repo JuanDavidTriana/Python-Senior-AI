@@ -1,0 +1,27 @@
+-- Esquema del SGA
+CREATE TABLE IF NOT EXISTS docentes (
+  id SERIAL PRIMARY KEY,
+  nombre VARCHAR(100) NOT NULL,
+  correo VARCHAR(100) UNIQUE NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS programas (
+  id SERIAL PRIMARY KEY,
+  nombre VARCHAR(100) NOT NULL,
+  duracion INT NOT NULL,
+  docente_id INT REFERENCES docentes(id) ON DELETE SET NULL
+);
+
+CREATE TABLE IF NOT EXISTS alumnos (
+  id SERIAL PRIMARY KEY,
+  nombre VARCHAR(100) NOT NULL,
+  correo VARCHAR(100) UNIQUE NOT NULL,
+  programa_id INT REFERENCES programas(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS notas (
+  id SERIAL PRIMARY KEY,
+  alumno_id INT REFERENCES alumnos(id) ON DELETE CASCADE,
+  asignatura VARCHAR(100) NOT NULL,
+  calificacion NUMERIC(3,1) CHECK (calificacion BETWEEN 0 AND 5)
+);
