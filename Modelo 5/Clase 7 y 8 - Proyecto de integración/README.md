@@ -704,19 +704,6 @@ logging.basicConfig(level=logging.DEBUG)
 
 ---
 
-## 👨‍💻 Autor y Contacto
-
-**Proyecto Educativo - Clase 7 y 8**  
-*Python Senior AI - Modelo 5*  
-*Dev Senior Code*
-
----
-
-## 📄 Licencia
-
-Este proyecto es para fines educativos.
-
----
 
 ## ✅ Checklist de Conceptos Aplicados
 
