@@ -6,7 +6,6 @@ class vehiculoService:
     def __init__(self, repository: VehiculoRepository):
         self.repository = repository
 
-
     def listar(self):
         return self.repository.listar()
     

@@ -5,3 +5,7 @@ class ClienteCreate(BaseModel):
     edad: int
     img_url: str
     
+class ClienteUpdate(BaseModel):
+    nombre: str
+    edad: int
+    img_url: str
