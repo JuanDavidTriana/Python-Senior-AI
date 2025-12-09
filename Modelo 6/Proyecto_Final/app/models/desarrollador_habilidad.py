@@ -6,7 +6,7 @@ from .base import Base
 class DesarrolladorHabilidad(Base):
     __tablename__ = 'desarrollador_habilidad'
     
-    id = Column(BigInteger, primary_key=True)
+    id = Column(BigInteger, primary_key=True, autoincrement=True)
     desarrollador_id = Column(BigInteger, ForeignKey('desarrolladores.id'), nullable=False)
     habilidad_id = Column(BigInteger, ForeignKey('habilidades.id'), nullable=False)
     nivel = Column(Integer, nullable=False)

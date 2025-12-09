@@ -6,7 +6,7 @@ from .base import Base
 class Proyecto(Base):
     __tablename__ = 'proyectos'
     
-    id = Column(BigInteger, primary_key=True)
+    id = Column(BigInteger, primary_key=True, autoincrement=True)
     nombre = Column(String(255), nullable=False)
     descripcion = Column(Text, nullable=False)
     fecha_inicio = Column(DateTime, nullable=False)

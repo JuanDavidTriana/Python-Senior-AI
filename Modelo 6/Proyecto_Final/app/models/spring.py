@@ -6,7 +6,7 @@ from .base import Base
 class Sprint(Base):
     __tablename__ = 'spring'
     
-    id = Column(BigInteger, primary_key=True)
+    id = Column(BigInteger, primary_key=True, autoincrement=True)
     proyecto_id = Column(BigInteger, ForeignKey('proyectos.id'), nullable=False)
     nombre = Column(String(255), nullable=False)
     objetivo = Column(Text, nullable=False)

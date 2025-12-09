@@ -6,7 +6,7 @@ from .base import Base
 class Tarea(Base):
     __tablename__ = 'tareas'
     
-    id = Column(BigInteger, primary_key=True)
+    id = Column(BigInteger, primary_key=True, autoincrement=True)
     user_story_id = Column(BigInteger, ForeignKey('user_stories.id'), nullable=False)
     titulo = Column(String(255), nullable=False)
     descripcion = Column(Text, nullable=False)

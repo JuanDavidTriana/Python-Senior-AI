@@ -6,7 +6,7 @@ from .base import Base
 class TareaAsignacion(Base):
     __tablename__ = 'tarea_asignacion'
     
-    id = Column(BigInteger, primary_key=True)
+    id = Column(BigInteger, primary_key=True, autoincrement=True)
     tarea_id = Column(BigInteger, ForeignKey('tareas.id'), nullable=False)
     desarrollador_id = Column(BigInteger, ForeignKey('desarrolladores.id'), nullable=False)
     fecha_asignacion = Column(DateTime, nullable=False)

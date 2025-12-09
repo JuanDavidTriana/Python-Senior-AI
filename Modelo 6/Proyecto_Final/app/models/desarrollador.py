@@ -6,7 +6,7 @@ from .base import Base
 class Desarrollador(Base):
     __tablename__ = 'desarrolladores'
     
-    id = Column(BigInteger, primary_key=True)
+    id = Column(BigInteger, primary_key=True, autoincrement=True)
     nombre = Column(String(255), nullable=False)
     apellido = Column(String(255), nullable=False)
     correo = Column(String(255), nullable=False)

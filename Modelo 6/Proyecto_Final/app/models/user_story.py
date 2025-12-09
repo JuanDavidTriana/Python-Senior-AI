@@ -6,7 +6,7 @@ from .base import Base
 class UserStory(Base):
     __tablename__ = 'user_stories'
     
-    id = Column(BigInteger, primary_key=True)
+    id = Column(BigInteger, primary_key=True, autoincrement=True)
     proyecto_id = Column(BigInteger, ForeignKey('proyectos.id'), nullable=False)
     sprint_id = Column(BigInteger, ForeignKey('spring.id'), nullable=False)
     titulo = Column(String(255), nullable=False)
